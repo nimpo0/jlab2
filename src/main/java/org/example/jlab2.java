@@ -12,8 +12,8 @@ public class jlab2 {
             System.out.println(phone);
         }
 
-        System.out.println("\nChoose an option:");
-        System.out.println("1) Information about subscribers whose local call time exceeds the specified time");
+        System.out.print("\nChoose an option:");
+        System.out.println("\n1) Information about subscribers whose local call time exceeds the specified time");
         System.out.println("2) Information about subscribers who used long distance communication");
         System.out.println("3) Information about subscribers whose account number is in the specified range");
 
@@ -21,12 +21,17 @@ public class jlab2 {
         int option = scan.nextInt();
 
         if(option == 1){
+            System.out.print("\nEnter the time (in minutes):");
+            int time = scan.nextInt();
+            getSubsOfTownTalks(time, phones);
+        }
+        else if(option == 2){
+            getSubsOfLongDistanceTalks(phones);
+        }
+        else if(option == 3){
 
-        } else if(option == 2){
-
-        } else if(option == 3){
-
-        } else {
+        }
+        else {
             System.out.println("There is no such choice");
         }
     }
@@ -72,6 +77,22 @@ public class jlab2 {
         return phones;
     }
 
-    public static void getSubs
+    public static void getSubsOfTownTalks(int time, Phone[] phones){
+        for(Phone p: phones){
+            if(time < p.getTimeForTownTalks()){
+                p.toString();
+            }
+        }
+    }
+
+    public static void getSubsOfLongDistanceTalks(Phone[] phones){
+        for(Phone p: phones){
+            if(p.getLongDistanceCallTime() > 0){
+                p.toString();
+            }
+        }
+    }
+
+
 }
 
