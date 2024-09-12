@@ -23,22 +23,6 @@ public class Phone {
         this.longDistanceCallTime = longDistanceCallTime;
     }
 
-    public int getId(){
-        return id;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getMiddleName() {
-        return middleName;
-    }
-
     public int getAccountNum() {
         return accountNum;
     }
@@ -56,7 +40,7 @@ public class Phone {
                 ", last name - " + lastName +
                 ", first name - " + firstName +
                 ", middle name - " + middleName +
-                ", account number - " + accountNum +
+                ", \naccount number - " + accountNum +
                 ", time for town talks - " + timeForTownTalks +
                 ", long distance call time - " + longDistanceCallTime;
     }
