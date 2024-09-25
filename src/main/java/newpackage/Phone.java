@@ -47,16 +47,6 @@ public class Phone {
         this.longDistanceCallTime = longDistanceCallTime;
     }
 
-    public void setValue(int id, String lastName, String firstName, String middleName, int accountNum, int timeForTownTalks, int longDistanceCallTime){
-        this.id = id;
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.accountNum = accountNum;
-        this.timeForTownTalks = timeForTownTalks;
-        this.longDistanceCallTime = longDistanceCallTime;
-    }
-
     public int getAccountNum() {
         return accountNum;
     }
