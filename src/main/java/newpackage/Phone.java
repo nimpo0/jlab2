@@ -9,8 +9,42 @@ public class Phone {
     private int timeForTownTalks;
     private int longDistanceCallTime;
 
-    public Phone(int id, String lastName, String firstName, String middleName, int accountNum, int timeForTownTalks, int longDistanceCallTime){
-        setValue(id , lastName, firstName, middleName, accountNum, timeForTownTalks, longDistanceCallTime);
+    public Phone(int id, String lastName, String firstName, String middleName, int accountNum, int timeForTownTalks, int longDistanceCallTime) {
+        this.id = id;
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.accountNum = accountNum;
+        this.timeForTownTalks = timeForTownTalks;
+        this.longDistanceCallTime = longDistanceCallTime;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public void setAccountNum(int accountNum) {
+        this.accountNum = accountNum;
+    }
+
+    public void setTimeForTownTalks(int timeForTownTalks) {
+        this.timeForTownTalks = timeForTownTalks;
+    }
+
+    public void setLongDistanceCallTime(int longDistanceCallTime) {
+        this.longDistanceCallTime = longDistanceCallTime;
     }
 
     public void setValue(int id, String lastName, String firstName, String middleName, int accountNum, int timeForTownTalks, int longDistanceCallTime){

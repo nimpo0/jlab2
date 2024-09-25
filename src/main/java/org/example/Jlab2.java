@@ -3,7 +3,7 @@ package org.example;
 import java.util.Scanner;
 import newpackage.Phone;
 
-public class jlab2 {
+public class Jlab2 {
     public static void main(String[] args) {
         Phone[] phones = createPhonesArray();
 
@@ -83,9 +83,10 @@ public class jlab2 {
 
     public static void getSubsOfTownTalks(int time, Phone[] phones){
         System.out.println("\nSubscribers whose local call time exceeds " + time + " minutes:");
-        for(Phone p: phones){
-            if(time < p.getTimeForTownTalks()){
-                System.out.println(p.toString());
+
+       for(int i = 1; i < phones.length; i++){
+            if(time < phones[i].getTimeForTownTalks()){
+                System.out.println(phones[i].toString());
             }
         }
     }
@@ -94,7 +95,7 @@ public class jlab2 {
         System.out.println("\nSubscribers who used long distance talks:");
         for(Phone p: phones){
             if(p.getLongDistanceCallTime() > 0){
-                System.out.println(p.toString());
+                System.out.println(p);
             }
         }
     }
@@ -104,7 +105,7 @@ public class jlab2 {
         for(Phone p: phones){
             int acNum = p.getAccountNum();
             if(range1 <= acNum && acNum <= range2){
-                System.out.println(p.toString());
+                System.out.println(p);
             }
         }
     }
